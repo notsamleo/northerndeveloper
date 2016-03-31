@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>@ViewBag.Title - Sam King</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="@Url.Action("Index","Home")">Sam King | <span class="northern-dev">Northern Developer</span></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="About menu" href="@Url.Action("Index","Home")">About</a></li>
+                        <li><a class="Portfolio menu" href="@Url.Action("Portfolio","Portfolio")">Portfolio</a></li>
+                        <li><a class="Contact menu" href="@Url.Action("ContactForm","Contact")">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+
+        <div class="jumbotron no-padding">
+            <div class="container-fluid no-padding">
+                <div class="jumbotron-box">
+                    <h1 class="jumbotron-header">Hi, I'm Sam</h1>
+                    <h4>I drink coffee and make stuff</h4>
+                    <a class="btn btn-primary btn-lg jumbotron-button" href="@Url.Action("Contact", "Contact")">Hire Me</a>
+                </div>
+            </div>
+        </div>
+        
+        @RenderBody()
+
+
+        <footer>
+            <div class="container-fluid footer">
+                <h4 class="footer-header">Like what you see?</h4>
+                <h2 class="footer-subheader">Put a ring on it.</h2>
+                <p class="beyonce">(Oh, oh, oh!)</p>
+                <p class="footer-text"><a class="contact-info" href="tel:07446250138">07446250138</a></p>
+                <p class="footer-text"><a class="contact-info" href="mailto:samking@northerndeveloper.co.uk">samking@notherndeveloper.co.uk</a></p>
+                <p class="footer-text"><a class="contact-info" href="https://goo.gl/3t6ifd">Salford Quays, Manchester</a></p>
+            </div>
+        </footer>
+
+        <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+    </body>
+</html>

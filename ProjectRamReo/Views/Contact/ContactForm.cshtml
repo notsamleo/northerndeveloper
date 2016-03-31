@@ -1,0 +1,30 @@
+﻿@model ProjectRamReo.Models.ContactModel
+
+<style>
+    .Contact {
+        background-color: white;
+        color: black !important;
+    }
+
+        .Contact:hover {
+            background-color: white !important;
+            color: #888 !important;
+        }
+</style>
+
+<div class="container-fluid about-header">
+    <h1>Get in touch</h1>
+    <h4>Here's a nifty form to make it easy</h4>
+</div>
+
+<div class="contact-container" >
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.TextBox("Name", "", new {@placeholder = "Name", @class="ContactFormInput"})@Html.ValidationMessage("Name") <br />
+        @Html.TextBox("Email", "", new { @placeholder = "Email", @class = "ContactFormInput" })@Html.ValidationMessage("Email") <br />
+        @Html.TextArea("Comments", "", new { @class = "ContactCommentInput" })@Html.ValidationMessage("Message") <br />
+        
+        <button class="btn btn-primary" type="submit">Submit</button>
+    }
+</div>
